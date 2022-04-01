@@ -29,6 +29,10 @@
                 console.log("Chromium-based browser detected")
                 myButton.insertAdjacentHTML("afterbegin",`<button onclick="MIDIjs.play('mus/takemybr.mid');">play audio</button>`)
                 myDesc.insertAdjacentHTML("afterbegin",`<label for="#chromeaudio"><div style="font-size:24pt;">🛈</div> Chromium-based browsers do not support autoplay audio. Use IE, Mozilla Firefox or click the button to play.</label>`)
+            }else if(userAgent.match(/safari/i)){
+                console.log("Safari detected")
+                myButton.insertAdjacentHTML("afterbegin",`<button onclick="MIDIjs.play('mus/takemybr.mid');">play audio</button>`)
+                myDesc.insertAdjacentHTML("afterbegin",`<label for="#chromeaudio"><div style="font-size:24pt;">🛈</div> The Safari browser does not support autoplay audio. Use IE, Mozilla Firefox or click the button to play.</label>`)
             }
         </script>
         <h1 id="mytitle" style="text-align:center;color:forestgreen;font-size:36pt;"">welcome my visitors</h1>
