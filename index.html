@@ -28,7 +28,7 @@
             if(userAgent.match(/chrome|chromium|crios/i)){
                 console.log("Chromium-based browser detected")
                 myButton.insertAdjacentHTML("afterbegin",`<button onclick="MIDIjs.play('mus/takemybr.mid');">play audio</button>`)
-                myDesc.insertAdjacentHTML("afterbegin",`<label for="#chromeaudio">Chromium-based browsers do not support autoplay audio. Use IE, Mozilla Firefox or click the button to play.</label>`)
+                myDesc.insertAdjacentHTML("afterbegin",`<label for="#chromeaudio"><div style="font-size:24pt;">🛈</div> Chromium-based browsers do not support autoplay audio. Use IE, Mozilla Firefox or click the button to play.</label>`)
 
             }
         </script>
