@@ -19,6 +19,19 @@
         <script>MIDIjs.play('mus/takemybr.mid');</script>
         <marquee truespeed scrolldelay=20 style="background:yellow;font-size:48pt;font-family:'Comic Sans MS'">stevo's spectacular site</marquee>
         <img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF">
+        <div id="chromereason"></div>
+        <div id="chromeaudio"></div>
+        <script>
+            let myButton = document.querySelector("#chromeaudio")
+            let myDesc = document.querySelector("#chromereason")
+            const userAgent = navigator.userAgent;
+            if(userAgent.match(/chrome|chromium|crios/i)){
+                console.log("Chromium-based browser detected")
+                myButton.insertAdjacentHTML("afterbegin",`<button onclick="MIDIjs.play('mus/takemybr.mid');">play audio</button>`)
+                myDesc.insertAdjacentHTML("afterbegin",`<label for="#chromeaudio">Chromium-based browsers do not support autoplay audio. Use IE, Mozilla Firefox or click the button to play.</label>`)
+
+            }
+        </script>
         <h1 id="mytitle" style="text-align:center;color:forestgreen;font-size:36pt;"">welcome my visitors</h1>
         <h2 style="text-align:center;color:forestgreen"><i>to the best website on the internet</i></h2>
         <div style="margin: auto;text-align: center;">
