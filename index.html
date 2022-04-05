@@ -13,11 +13,39 @@
                 background-image: url('img/CLDYSKYL.JPG');
                 text-align: center;
             }
+            .sidelinks {
+                margin-top: 110px;
+                margin-left: 10px;
+                width: 230px;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: tomato;
+                border: 10px dotted brown;
+                color: yellow;
+                overflow-x: hidden;
+            }
+            .sidelinks ul{
+                margin-left: 5px;
+                font-size: 18pt;
+                text-align: left;
+            }
         </style>
     </head>
     <body>
         <script>MIDIjs.play('mus/takemybr.mid');</script>
         <marquee truespeed scrolldelay=20 style="background:yellow;font-size:48pt;font-family:'Comic Sans MS'">stevo's spectacular site</marquee>
+        <div class="sidelinks">
+            <h1>links</h1>
+            <i>links to my pages and my favourite sites</i>
+            <ul>
+                <li><a href="music.html">banging tunes</a></li>
+                <li><a href="mattyg.html">Matty G website</a></li>
+                <li><a href="https://itv.com" target="_top">the hub</a></li>
+                <li><a href="hyperrrlinks.html">paedo list</a></li>
+            </ul>
+        </div>
         <img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF">
         <div id="chromereason"></div>
         <div id="chromeaudio"></div>
@@ -32,7 +60,7 @@
             }else if(userAgent.match(/safari/i)){
                 console.log("Safari detected")
                 myButton.insertAdjacentHTML("afterbegin",`<button onclick="MIDIjs.play('mus/takemybr.mid');">play audio</button>`)
-                myDesc.insertAdjacentHTML("afterbegin",`<label for="#chromeaudio"><div style="font-size:24pt;">🛈</div> The Safari browser does not support autoplay audio. Use IE, Mozilla Firefox or click the button to play.</label>`)
+                myDesc.insertAdjacentHTML("afterbegin",`<label for="#chromeaudio"><div style="font-size:24pt;">🛈</div> The Safari browser does not support MIDI audio. Use Mozilla Firefox or a Chromium-based browser to play.</label>`)
             }
         </script>
         <h1 id="mytitle" style="text-align:center;color:forestgreen;font-size:36pt;">welcome my visitors</h1>
@@ -54,17 +82,6 @@
         <br>
         <br>
         <br>
-        <div style="text-align: left; margin-left: 20%; margin-right: 40%; border: 10px dotted brown; background-color: tomato;">
-            <div style="margin:5px; color: yellow;">
-                <h1>links</h1>
-                <i>links to my pages and my favourite sites</i>
-                <ul>
-                    <li><a href="music.html">banging tunes</a></li>
-                    <li><a href="mattyg.html">Matty G website</a></li>
-                    <li><a href="https://itv.com" target="_top">the hub</a></li>
-                </ul>
-            </div>
-        </div>
         <footer style="margin-top: 50px;margin-bottom: 0px !important; margin-left: 0px !important;margin-right: 0px !important;">
             <div style="background-color: lightgray;padding: 15px;">
                 © 2022 Alexander Stevenson.
