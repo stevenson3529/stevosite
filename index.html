@@ -13,7 +13,7 @@
         <style>
             :root{
                 --bg: url('img/bg/CLDYSKYL.JPG');
-                --isfixed: fixed;
+                --isfixed: absolute;
             }
             body{
                 background-image: var(--bg);
@@ -64,6 +64,16 @@
                 font-size: 18pt;
                 text-align: left;
             }
+            .advert{
+                border: 3px solid black;
+                color: white;
+                position: var(--isfixed);
+                margin-top: 300px;
+                background-color: black;
+                font-family: sans-serif;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
         </style>
     </head>
     <body>
@@ -80,17 +90,28 @@
                 <li><a href="hyperrrlinks.html">paedo list</a></li>
             </ul>
         </div>
-        <div class="customisationpanel">
-            <h1>customisation</h1>
-            Change page background:
-            <ul>
-                <img id="bg1" src="img/bg/CLDYSKYL.JPG" onclick="var x = document.querySelector(':root');x.style.setProperty('--bg','url(img/bg/CLDYSKYL.JPG)');">
-                <img id="bg2" src="img/bg/CLDYSKYD.JPG" onclick="var x = document.querySelector(':root');x.style.setProperty('--bg','url(img/bg/CLDYSKYD.JPG)');">
-                <img id="bg3" src="img/bg/COTTCNDY.JPG" onclick="var x = document.querySelector(':root');x.style.setProperty('--bg','url(img/bg/COTTCNDY.JPG)');"><br>
-                <img id="bg4" src="img/bg/SOAPSTON.JPG" onclick="var x = document.querySelector(':root');x.style.setProperty('--bg','url(img/bg/SOAPSTON.JPG)');">
-                <img id="bg5" src="img/bg/GRNSTONE.JPG" onclick="var x = document.querySelector(':root');x.style.setProperty('--bg','url(img/bg/GRNSTONE.JPG)');">
-                <img id="bg6" src="img/bg/SCALE.JPG" onclick="var x = document.querySelector(':root');x.style.setProperty('--bg','url(img/bg/SCALE.JPG)');">
-            </ul>
+        <div class="advert" style="float: left;left:0;margin-top: 350px;width: 300px;">
+            <b>ADVERTISING</b>
+            <img src="img/MGRAPES.GIF" width="300" height="200">
+        </div>
+        <div name="right bar">
+            <div class="customisationpanel">
+                <h1>customisation</h1>
+                Change page background:
+                <ul>
+                    <img id="bg1" src="img/bg/CLDYSKYL.JPG" onclick="var x = document.querySelector(':root');x.style.setProperty('--bg','url(img/bg/CLDYSKYL.JPG)');">
+                    <img id="bg2" src="img/bg/CLDYSKYD.JPG" onclick="var x = document.querySelector(':root');x.style.setProperty('--bg','url(img/bg/CLDYSKYD.JPG)');">
+                    <img id="bg3" src="img/bg/COTTCNDY.JPG" onclick="var x = document.querySelector(':root');x.style.setProperty('--bg','url(img/bg/COTTCNDY.JPG)');"><br>
+                    <img id="bg4" src="img/bg/SOAPSTON.JPG" onclick="var x = document.querySelector(':root');x.style.setProperty('--bg','url(img/bg/SOAPSTON.JPG)');">
+                    <img id="bg5" src="img/bg/GRNSTONE.JPG" onclick="var x = document.querySelector(':root');x.style.setProperty('--bg','url(img/bg/GRNSTONE.JPG)');">
+                    <img id="bg6" src="img/bg/SCALE.JPG" onclick="var x = document.querySelector(':root');x.style.setProperty('--bg','url(img/bg/SCALE.JPG)');">
+                </ul>
+            </div>
+
+        </div>
+        <div class="advert" style="float: right;right:0;width: 205px;">
+            <b>ADVERTISING</b>
+            <img src="img/TITGREGG.GIF" width="200" height="200">
         </div>
         <div style="float:center;white-space: nowrap;"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"></div>
         <div id="chromereason"></div>
