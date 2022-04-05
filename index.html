@@ -87,7 +87,7 @@
                 <img id="bg6" src="img/bg/SCALE.JPG" onclick="var x = document.querySelector(':root');x.style.setProperty('--bg','url(img/bg/SCALE.JPG)');">
             </ul>
         </div>
-        <img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF">
+        <div style="float:center;white-space: nowrap;"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"><img src="img/EXCLAIM.GIF"></div>
         <div id="chromereason"></div>
         <div id="chromeaudio"></div>
         <script>
@@ -102,6 +102,8 @@
                 console.log("Safari detected")
                 myButton.insertAdjacentHTML("afterbegin",`<button onclick="MIDIjs.play('mus/takemybr.mid');">play audio</button>`)
                 myDesc.insertAdjacentHTML("afterbegin",`<label for="#chromeaudio"><div style="font-size:24pt;">🛈</div> The Safari browser does not support MIDI audio. Use Mozilla Firefox or a Chromium-based browser to play.</label>`)
+            }else if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+                alert("You appear to be using a mobile browser. I am so sorry.")
             }
         </script>
         <h1 id="mytitle" style="text-align:center;color:forestgreen;font-size:36pt;">welcome my visitors</h1>
