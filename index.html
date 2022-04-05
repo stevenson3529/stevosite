@@ -11,6 +11,7 @@
         <style>
             :root{
                 --bg: url('img/bg/CLDYSKYL.JPG');
+                --isfixed: fixed;
             }
             body{
                 background-image: var(--bg);
@@ -20,7 +21,7 @@
                 margin-top: 110px;
                 margin-left: 10px;
                 width: 230px;
-                position: fixed;
+                position: var(--isfixed);
                 z-index: 1;
                 top: 0;
                 left: 0;
@@ -34,7 +35,7 @@
                 margin-right: 10px;
                 padding-left: 10px;
                 width: 220px;
-                position: fixed;
+                position: var(--isfixed);
                 z-index: 1;
                 top: 0;
                 right: 0;
@@ -65,6 +66,7 @@
     <body>
         <script>MIDIjs.play('mus/takemybr.mid');</script>
         <marquee truespeed scrolldelay=20 style="background:yellow;font-size:48pt;font-family:'Comic Sans MS'">stevo's spectacular site</marquee>
+        <div id="mobilewarn"></div>
         <div class="sidelinks">
             <h1>links</h1>
             <i>links to my pages and my favourite sites</i>
@@ -94,16 +96,20 @@
             let myButton = document.querySelector("#chromeaudio")
             let myDesc = document.querySelector("#chromereason")
             const userAgent = navigator.userAgent;
+            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|ios|iOS|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+                let x = document.querySelector(':root');
+                x.style.setProperty('--isfixed','unset')
+                console.log("Safari detected")
+                let mobWarn = document.querySelector("#mobilewarn")
+                mobWarn.insertAdjacentHTML("afterbegin",`<label for="#mobwarn"><div style="font-size:24pt;">ℹ️</div>Mobile browser detected. Some features may not work properly.</label>`)
+            }
             if(userAgent.match(/chrome|chromium|crios/i)){
                 console.log("Chromium-based browser detected")
                 myButton.insertAdjacentHTML("afterbegin",`<button onclick="MIDIjs.play('mus/takemybr.mid');">play audio</button>`)
                 myDesc.insertAdjacentHTML("afterbegin",`<label for="#chromeaudio"><div style="font-size:24pt;">🛈</div> Chromium-based browsers do not support autoplay audio. Use IE, Mozilla Firefox or click the button to play.</label>`)
             }else if(userAgent.match(/safari/i)){
                 console.log("Safari detected")
-                myButton.insertAdjacentHTML("afterbegin",`<button onclick="MIDIjs.play('mus/takemybr.mid');">play audio</button>`)
                 myDesc.insertAdjacentHTML("afterbegin",`<label for="#chromeaudio"><div style="font-size:24pt;">🛈</div> The Safari browser does not support MIDI audio. Use Mozilla Firefox or a Chromium-based browser to play.</label>`)
-            }else if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-                alert("You appear to be using a mobile browser. I am so sorry.")
             }
         </script>
         <h1 id="mytitle" style="text-align:center;color:forestgreen;font-size:36pt;">welcome my visitors</h1>
